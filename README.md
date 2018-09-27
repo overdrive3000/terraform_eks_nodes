@@ -4,8 +4,8 @@ This terraform module creates an Auto Scaling group that will launch nodes that 
 
 The EKS nodes module requires:
 
-* An EKS Cluster, preferably created using the [EKS Cluster Module](https://github.com/overdrive3000/eks_cluster).
-* An IAM instance profile with at least these managed policies attached to it AmazonEKSWorkerNodePolicy and AmazonEC2ContainerRegistryReadOnly. The [EKS Cluster Module](https://github.com/overdrive3000/eks_cluster) already creates an Instance Role that can be used in this module.
+* An EKS Cluster, preferably created using the [EKS Cluster Module](https://github.com/overdrive3000/terraform_eks_cluster).
+* An IAM instance profile with at least these managed policies attached to it AmazonEKSWorkerNodePolicy and AmazonEC2ContainerRegistryReadOnly. The [EKS Cluster Module](https://github.com/overdrive3000/terraform_eks_cluster) already creates an Instance Role that can be used in this module.
 * Public SSH Key Pair.
 
 ## Features
