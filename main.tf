@@ -77,7 +77,7 @@ resource "aws_security_group_rule" "control-plane-sg-ingress" {
 data "aws_ami" "eks-node" {
   filter {
     name   = "name"
-    values = ["amazon-eks-${var.k8sversion}-*"]
+    values = ["amazon-eks-node-${var.k8sversion}-*"]
   }
 
   most_recent = true
