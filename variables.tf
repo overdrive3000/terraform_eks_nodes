@@ -13,13 +13,17 @@ variable "subnets" {
   default = []
 }
 
+variable "k8sversion" {
+  default = "1.11"
+}
+
 variable "kubelet_extra_args" {
   default = ""
 }
 
 variable "instance_type" {
   default = "t2.small"
-  type = "string"
+  type    = "string"
 }
 
 variable "desired" {

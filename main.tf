@@ -77,7 +77,7 @@ resource "aws_security_group_rule" "control-plane-sg-ingress" {
 data "aws_ami" "eks-node" {
   filter {
     name   = "name"
-    values = ["amazon-eks-*"]
+    values = ["amazon-eks-${var.k8sversion}-*"]
   }
 
   most_recent = true
@@ -108,14 +108,14 @@ resource "aws_autoscaling_group" "eks-node" {
   vpc_zone_identifier  = ["${var.subnets}"]
 
   tag {
-    key = "auto-delete"
-    value = "no"
+    key                 = "auto-delete"
+    value               = "no"
     propagate_at_launch = true
   }
 
   tag {
-    key = "auto-stop"
-    value = "no"
+    key                 = "auto-stop"
+    value               = "no"
     propagate_at_launch = true
   }
 
